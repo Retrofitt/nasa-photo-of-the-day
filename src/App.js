@@ -7,6 +7,8 @@ import TopSection from './components/TopSection'
 import Image from './components/Image'
 import CommentSection from './components/CommentSection'
 
+import styled from 'styled-components'
+
 function App() {
 
   const [photoOfTheDay, setPhotoOfTheDay] = useState([])
@@ -23,13 +25,27 @@ function App() {
 
   return (
     <div className="App">
+      
       <p>
         Read through the instructions in the README.md file to build your NASA
         app! Have fun <span role="img" aria-label='go!'>🚀</span>!
       </p>
-      <TopSection name={photoOfTheDay.copyright} date={photoOfTheDay.date} title={photoOfTheDay.title} />
-      <Image photoUrl={photoOfTheDay.url} title={photoOfTheDay.title}/>
-      <CommentSection comment={photoOfTheDay.explanation}  />
+
+      <TopSection 
+        name={photoOfTheDay.copyright} 
+        date={photoOfTheDay.date} 
+        title={photoOfTheDay.title} 
+        comment={photoOfTheDay.explanation}  
+      />
+
+      <Image 
+        photoUrl={photoOfTheDay.url} 
+        title={photoOfTheDay.title}
+      />
+
+      <CommentSection 
+        comment={photoOfTheDay.explanation}  
+      />
     </div>
 
     
