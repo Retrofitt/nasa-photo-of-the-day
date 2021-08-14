@@ -7,8 +7,6 @@ import TopSection from './components/TopSection'
 import Image from './components/Image'
 import CommentSection from './components/CommentSection'
 
-import styled from 'styled-components'
-
 function App() {
 
   const [photoOfTheDay, setPhotoOfTheDay] = useState([])

@@ -1,62 +1,32 @@
 
-import React,{useState, useEffect} from "react";
+import React from "react";
 
 import styled from 'styled-components'
 
-// export default function Image(props){
-//     const { photoUrl, title }= props
+export default function Image(props){
+    const { photoUrl, title }= props
 
-//     const imageDiv = styled.div`
-//         width: 10%;
-//         display: flex;
-//         justify-content:space-between;
-        
-//     `;
+    const ImageDiv = styled.div`
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: whitesmoke;
+    `;
+
+    const StyledImage = styled.img`
+        border-radius:200px;
+        justify-content: center;
+        align-items: center;
+    `
+
    
-//     return (
-//         <imageDiv>
-//             <img
-//             alt= {title}
-//             src= {photoUrl}
-//             >
-//             </img>
-//         </imageDiv>
-//     )
-// }
-
-import {
-  Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle
-} from 'reactstrap';
-
-const Image = (props) => {
-    const { photoUrl, title, comment }= props
     return (
-        <Card>
-            <CardImg 
-                top width="50%" 
-                src={photoUrl} 
-                alt="nasa photo of the day" 
-            />
-
-            <CardBody>
-
-                <CardTitle 
-                    tag="h5">{title}
-                </CardTitle>
-                
-                <CardSubtitle 
-                    tag="h6" 
-                    className="mb-2 text-muted"
-                >Card subtitle</CardSubtitle>
-                
-                <CardText>
-                    {comment}
-                </CardText>
-
-            </CardBody>
-        </Card>
-  );
-};
-
-export default Image;
+        <ImageDiv>
+            <StyledImage
+            alt= {title}
+            src= {photoUrl}
+            >
+            </StyledImage>
+        </ImageDiv>
+    )
+}

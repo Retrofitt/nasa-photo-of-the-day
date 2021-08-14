@@ -1,5 +1,5 @@
 
-import React,{useState, useEffect} from "react";
+import React from "react";
 
 
 export default function TopSection(props){
@@ -8,8 +8,8 @@ export default function TopSection(props){
     return (
         <div>
             <h1>{title}</h1>
-            <h2>CopyRight belongs to {name}</h2>
-            <p>NASA Photo of this day: {date}</p>
+            <h2>{name}</h2>
+            <p>{date}</p>
         </div>
     )
 }
